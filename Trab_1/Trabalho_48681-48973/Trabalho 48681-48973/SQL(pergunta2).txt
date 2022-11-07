@@ -1,0 +1,13 @@
+2-
+  b)
+  	create table membro(
+  			nome char (20),
+  			email char (20),
+  			ano integer,
+  			primary key (email));
+  			
+  	create table gostaDe(
+  			nome char (20),
+  			country varchar (4),
+  			primary key (nome,country));
+  			

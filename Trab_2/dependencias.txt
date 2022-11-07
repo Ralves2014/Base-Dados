@@ -1,0 +1,25 @@
+Registo-> nome, sexo, classificaçao_especie, classificaçao_familia, classificação_ordem, classificação_classe
+
+Registo->dataNascimento
+
+Registo->localC, dataC, estimativa
+
+Registo->NomeP
+
+Registo->coordenadas
+
+Registo->NIF
+
+Coordenadas->NIF
+
+Coordenadas->local, meio, área, atmosfera
+
+NIF-> NomeF, data_inicio
+
+NIF, data, hora-> local, registo
+
+classificação_espécie -> classificação_família
+
+classificação_família -> classificação_ordem
+
+classificação_ordem -> classificação_classe

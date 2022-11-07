@@ -1,0 +1,77 @@
+1)
+select percentage*population
+from language, country
+where country.code = country and country.name =’Brazil’
+and language.name=’Portuguese’
+
+
+2)
+SELECT count(c2.name)
+FROM country as c1, country as c2, borders
+WHERE ((country1=c1.code and country2=c2.code) or (country2=c1.code and country1=c2.code)) and c1.name='France'
+
+
+3)
+SELECT c1.name,count(c2.name)
+from country as c1, country as c2, borders
+WHERE (c1.code=country1 and c2.code=country2 or
+c1.code=country2 and c2.code = country1)
+GROUP by c1.name
+
+
+4)
+WITH count_nfront(name, N) as (SELECT c2.name,count(c1.name) as n
+                                FROM country as c1, country as c2,borders
+                                WHERE (c1.code=country1 and
+                                       c2.code=country2 or
+                                       c1.code=country2 and
+                                       c2.code = country1)
+                               		   GROUP BY c2.name)
+                               
+SELECT max(n) as n
+FROM count_nfront
+                              
+                              
+5)
+with count_nfront(name, N) as (select c2.name, count(c1.name) as n
+			       from country as c1,country as c2,borders
+			       where (c1.code=country1
+			              and c2.code=country2 or
+			              c1.code=country2 and
+			              c2.code = country1)
+				      group by c2.name)
+		
+select name
+from (select max(n) as n
+from count_nfront) as r , count_nfront
+where r.n = count_nfront.n
+
+
+6)
+select language.name
+from language, country
+where language.country= code and country.name=’Japan’
+
+
+7)
+select Name
+from country as c
+where not exists (select distinct language.name
+		  from language, country
+		  where country.name = ’Cuba’ and
+ 		  	language.country = country.code
+		  except
+		  select distinct language.name
+ 		  from language
+ 		  where country = C.code )
+ 		  
+ 		  
+8)
+select continent, count(country.name)
+from encompasses, country
+where country=code
+group by continent
+
+
+9)
+

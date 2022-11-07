@@ -1,0 +1,150 @@
+Exercicio 2-
+
+	CREATE TABLE Animal(
+  			NomeA char (20),
+  			registo integer,
+  			sexo char (20),
+  			classificação_especie char (20),
+  			classificação_ordem char (20),
+  			classificação_classe char (20),
+  			classificação_familia char (20),
+			Idade integer,
+  			primary key (registo));
+  			
+  			
+  			
+  	CREATE TABLE Funcionário(
+  			NIF integer,
+  			nomeF char (20),
+  			data_inicio char (20),
+  			primary key (NIF));
+  			
+  			
+  			
+  	CREATE TABLE Funcionário_telefones(
+  			NIF integer,
+  			telefones1 integer,
+			telefones2 integer,
+  			primary key (NIF,telefone1, telefone2));
+  			
+  			
+  	
+  	CREATE TABLE Espaço(
+  			coordenadas integer
+  			localE char (20),
+  			area integer,
+  			meio char (20),
+  			atmosfera char (20)
+  			primary key (Coordenadas));
+  			
+  			
+  			
+  	CREATE TABLE Consulta(
+			NIF integer,
+  			dataC char (20),
+  			horaC char (20),
+  			localC char (20),
+  			primary key (data,localC));
+  			
+  			
+  			
+  	CREATE TABLE Tratador(
+  			NIF integer,
+  			primary key (NIF));
+  			
+  			
+  			
+  	CREATE TABLE Veterinário(
+  			NIF integer,
+  			primary key (NIF));
+  			
+  			
+  			
+  	CREATE TABLE Tratador_Aux(
+  			NIF integer,
+  			primary key (NIF));
+  			
+  			
+  			
+  	CREATE TABLE Admnistrativo(
+  			NIF integer,
+  			primary key (NIF));
+  			
+  			
+  			
+  	CREATE TABLE Capturado(
+  			registo integer,
+  			localC char (20),
+  			dataC char (20),
+  			estimativa char (20)
+  			primary key (registo));
+  			
+  			
+  			
+  	CREATE TABLE Cativeiro(
+  			registo integer,
+  			data_nascimento char (20),
+  			primary key (registo));
+  			
+  	
+  	
+  	CREATE TABLE Diagnóstico(
+  			NIF integer,
+  			data char (20),
+  			hora char (20),
+			TipoD char (20),
+  			primary key (registo,datad,horad));
+  			
+  			
+  			
+  	CREATE TABLE Tratamento(
+  			NIF integer,
+  			data char (20),
+  			hora char (20),
+			TipoT char (20),
+  			primary key (registo,datat,horat));
+  			
+  			
+  			
+  	CREATE TABLE Progenitor(
+  			registoF integer,
+  			nomeP char (20),
+			registoP integer
+  			primary key (registoF,registoP));
+  			
+  			
+  			
+  	CREATE TABLE Tratado(
+  			registo integer,
+  			NIF integer,
+  			primary key (registo));
+  			
+  			
+  			
+  	CREATE TABLE Vive(
+  			registo integer,
+  			coordenadas integer,
+  			primary key (registo));
+  			
+  			
+  			
+  	CREATE TABLE Trabalha(
+  			coordenadas integer,
+  			NIF integer,
+  			primary key (coordenadas));
+  			
+  			
+  			
+  	CREATE TABLE Vai(
+  			NIF integer,
+  			dataC char (20),
+  			horaC char (20),
+  			registo integer,
+  			primary key (NIF,dataC,horaC));
+  			
+  			
+  			
+  	CREATE TABLE Responsável(
+  			NIF_1 integer,
+  			NIF_2 integer,
+  			primary key (NIF_1));

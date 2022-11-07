@@ -1,0 +1,12 @@
+6)
+Select country.name,COUNT(mar)
+FROM banha as b,country as c
+WHERE b.pais=c.code
+GROUP BY country.name
+
+
+7)
+SELECT mar,COUNT(pais)
+FROM banha
+GROUP BY mar
+

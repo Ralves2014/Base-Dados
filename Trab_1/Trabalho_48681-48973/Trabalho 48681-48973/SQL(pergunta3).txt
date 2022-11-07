@@ -1,0 +1,88 @@
+3.
+a)
+SELECT country.name 
+FROM country,organization,isMember
+where code=isMember.country and organization.name='European Union' and abbreviation=isMember.organization
+
+
+b)
+SELECT country.name
+from country, encompasses
+WHERE country.code=encompasses.country and encompasses.continent='Europe'
+
+EXCEPT
+
+SELECT country.name 
+FROM country,organization,isMember
+where code=isMember.country and organization.name='European Union' and abbreviation=isMember.organization
+
+
+c)
+SELECT country.name,economy.gdp
+from country,economy,isMember,organization
+where code=economy.country and code=isMember.country and organization.name='European Union' and abbreviation=isMember.organization
+
+d)
+SELECT country.name
+from country, continent,economy
+WHERE code=economy.country and continent.name='Europe' and economy.gdp=(SELECT MIN (economy.gdp) FROM economy);
+
+e)
+SELECT organization.name, count(ismember.country)
+from ismember, organization
+where ismember.organization=organization.abbreviation
+GROUP by organization.name
+
+f)
+SELECT country.name, count(ismember.organization)
+from country, ismember
+where code=ismember.country
+group by country.name
+
+g)
+WITH count_nfront(name, N) as (SELECT country.name, count(ismember.organization) as n
+                              from country, ismember
+                              WHERE (code=ismember.country)
+                              GROUP by country.name)
+SELECT name
+from (select max (n) as n 
+     from count_nfront) as country, count_nfront
+     WHERE country.n=count_nfront.n
+
+h)
+with count_nfront(name, N) as (SELECT organization.name, count(ismember.country) as n
+                               from organization, ismember
+                               WHERE organization.abbreviation=ismember.organization
+                               GROUP by organization.name)
+SELECT name 
+from (SELECT min(n)  as n
+     from count_nfront) as organization, count_nfront
+     WHERE organization.n=count_nfront.n
+
+i)
+SELECT country.name
+from country,economy
+WHERE code=economy.country and economy.gdp=(SELECT MAX (economy.gdp) FROM economy);
+
+j)
+SELECT name
+from country as c
+WHERE not EXISTS(SELECT DISTINCT ismember.organization
+                from country, ismember
+                where (code=ismember.country and country.name='Morocco')
+                EXCEPT
+                SELECT DISTINCT ismember.organization
+                from ismember
+                WHERE ismember.country=c.code )
+
+k)
+SELECT name
+from organization as c
+WHERE not EXISTS(SELECT DISTINCT country.name
+                from country, ismember, organization
+                where (code=ismember.country and organization.name='Benelux' and abbreviation=ismember.organization)
+                EXCEPT
+                SELECT DISTINCT country.name
+                from country,ismember
+                WHERE ismember.country=code and c.abbreviation=ismember.organization )
+

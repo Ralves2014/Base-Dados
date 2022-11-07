@@ -1,0 +1,82 @@
+Ficha 2 2º parte
+
+2(SQL)
+
+a)
+SELECT capital,population
+FROM country
+WHERE name='Portugal'
+
+
+b)
+SELECT continent
+FROM encompasses,country
+WHERE country.code=encompasses.country AND name='Portugal' 
+
+
+c)
+SELECT country.name
+FROM country,language
+WHERE country.code=language.country and percentage>50 AND language.name='Portuguese'
+
+
+d)
+SELECT country.name
+from country,language,encompasses
+WHERE country.code=encompasses.country and encompasses.country=language.country 
+      and continent='Europe' and language.name='French' and language.percentage>15
+      
+      
+e)
+SELECT country.name
+FROM country,encompasses
+WHERE continent='Europe' and encompasses.country=country.code
+
+EXCEPT
+
+SELECT country.name
+from country,language,encompasses
+WHERE country.code=encompasses.country and encompasses.country=language.country 
+      and continent='Europe' and language.name='French' and language.percentage>15
+      
+      
+f)
+SELECT c2.name
+FROM country as c1,country as c2,borders
+WHERE ((country1=c1.code and country2=c2.code) or (country2=c1.code and country1=c2.code))and c1.name='Spain' 
+
+
+g)
+SELECT area
+FROM continent
+EXCEPT
+SELECT c1.area
+FROM continent as c1, continent as c2
+WHERE c1.area<c2.area
+
+
+h)
+SELECT name
+FROM continent
+
+EXCEPT
+
+SELECT c1.name
+FROM continent as c1, continent as c2
+WHERE c1.area<c2.area
+
+
+i)
+SELECT length
+FROM borders
+
+EXCEPT
+
+SELECT c1.length
+from borders as c1, borders as c2
+WHERE c1.length<c2.length
+
+
+j)
+
+

@@ -1,0 +1,167 @@
+10.
+a)
+Select local
+from Animal natural inner join vive natural inner join Espaço
+where classe="aves"
+
+R: A5
+
+b)
+Select local
+from Espaço
+Expect
+Select local
+from Animal natural inner join vive natural inner join Espaço
+where ordem="carnívoros"
+
+R: A1, A2, A5
+
+c)
+with pais(registo, name2) as (Select Animal.registo, RegistoP as name2
+from cativeiro natural inner join progenitor natural inner join Animal
+where NomeA="Kilu"
+group by Animal.registo
+Union
+Select Animal.registo, RegistoM
+from cativeiro natural inner join progenitor natural inner join Animal
+where NomeA="Kilu"
+group by Animal.registo)
+
+Select registo
+from pais
+
+R:Kuli
+
+d)
+Select telefone1,telefone2
+from funcionário natural inner join tratador natural inner join Animal
+where NomeA="Kata"
+
+R: 919999996, 266787809
+
+e)
+Select telefone1,telefone2
+from funcionário natural inner join trabalha natural inner join vive natural inner join Animal
+where NomeA="Kata"
+
+R: 919999996, 266787806
+
+f)
+Select data, TipoT
+from Tratamneto natural inner join vai natural inner join Animal
+where NomeA="Mali"
+
+R: 12/09/2005 cálcio injetado
+12/12/2005 parto
+12/7/2006 antibiótico injetado
+
+g)
+Select NomeF
+from veterinário natural inner join funcionário natural inner join vai natural inner join diagnóstico natural inner join Animal
+where ordem="carnívoros" and TipoD="gravidez"
+
+R: Pedro Vale
+
+h)
+Select familia, count(registo)
+from Animal
+where ordem="artiodáctilos"
+group by familia
+
+R: hipopótamos 3
+cervídeos 5
+
+i)
+with pares(registoF, registoM) as (Select p1.registo, p2.registo
+from Animal as p1, Animal as p2
+where p1.sexo="F" and p2.sexo="M" and p1.espécie=p2.espécie)
+Select registoF, registoM
+from pares
+where (registof, registoM) not in (Select registoF, registoM
+from progenitor) and (registoM, registoF) not in (Select registoF, registoP
+from progenitor) and (registoF, registoM) not in (Select p1.registoF, p2.registoF
+from progenitor as p1, progenitor as p2
+where p1.registo=pe.registo) 
+
+R:Taji, Mali
+Taji, Kata
+Mali, Mata
+Cáta, Aka
+Aka, Mata
+Hipo, Tapi
+Kaki, Kalu
+Kaki, Luka
+Ará, Rará
+Zará, Rará
+
+j)
+with count_nfront(ordem, n) as (Select ordem, count(registo) as n
+from Animal
+group by ordem)
+Select ordem
+from (Select max(n) as n
+from count_nfront) as r, count_nfront
+where r.n=count_nfront.n
+
+R: carnívoros
+
+k)
+with n_cons(ordem,n) as (Select ordem, count(data)
+from Animal natural inner join vai
+group by ordem)
+Select ordem
+from n_cons
+Having n>5
+
+R: artiodáctilos, psittaciformes
+
+l)
+Select count(registo)
+from cativeiro
+
+R: 11
+
+m)
+with idades(NomeA, especie, n) as (Select registo, Idade as n
+from Animal
+group by registo)
+Select NomeA, especie
+from (Select max(n) as n
+from idades) as r, idades
+where r.n=idades.n
+
+R: Hipo, hipopótamo comum
+
+n)
+with count_nfront(local, n) as (Select local count(registos) as n
+from  Espaço natural inner join vive natural inner join Animal
+where atmosfera="quente e húmida" or atmosfera="fria e húmida" and classe="mamífero"
+group by local)
+Select local
+from (Select max(n) as n
+from count_nfront) as r, count_nfront
+where r.n=count_nfront.n
+
+R: A2
+
+o)
+Select NIF, count(registo)
+from Animal natural inner join tratado
+where classe="mamífero"
+group by NIF
+
+R: 123123123 7
+123123124 8
+123123125 0
+
+p)
+Select NomeA
+from Animal as A
+where not exist(Select NIF
+from Veterinário
+except
+Select NIF
+from vai
+where vai.registo=A.registo)
+
+R: Zula

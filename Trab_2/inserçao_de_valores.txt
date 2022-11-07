@@ -1,0 +1,262 @@
+insert into Animal values ('Taji',123456,'masculino','tigre','carnívoros','mamíferos','felinos',7);
+insert into Animal values ('Mali',222456,'feminino','tigre','carnívoros','mamíferos','felinos',7);
+insert into Animal values ('Aka',322456,'feminino','tigre','carnívoros','mamíferos','felinos',16);
+insert into Animal values ('TáTa',422456,'masculino','tigre','carnívoros','mamíferos','felinos',15);
+insert into Animal values ('Cáta',432456,'masculino','tigre','carnívoros','mamíferos','felinos',17);
+insert into Animal values ('Kata',522456,'feminino','tigre','carnívoros','mamíferos','felinos',14);
+insert into Animal values ('Mata',622456,'masculino','tigre','carnívoros','mamíferos','felinos',13);
+insert into Animal values ('Hipo',123444,'masculino','hipopótamo comum','artiodáctilos','mamíferos','hipopótamos',18);
+insert into Animal values ('Tapi',223444,'feminino','hipopótamo comum','artiodáctilos','mamíferos','hipopótamos',18);
+insert into Animal values ('Hita',323444,'feminino','hipopótamo comum','artiodáctilos','mamíferos','hipopótamos',15);
+insert into Animal values ('Kaki',123666,'masculino','veado','artiodáctilos','mamíferos','cervídeos',4);
+insert into Animal values ('Kalu',223666,'feminino','veado','artiodáctilos','mamíferos','cervídeos',4);
+insert into Animal values ('Kilu',323666,'feminino','veado','artiodáctilos','mamíferos','cervídeos',13);
+insert into Animal values ('Luka',423666,'feminino','veado','artiodáctilos','mamíferos','cervídeos',3);
+insert into Animal values ('Kuli',524666,'masculino','veado','artiodáctilos','mamíferos','cervídeos',13);
+insert into Animal values ('Ará',123555,'masculino','arara-azul-pequena','psittaciformes','aves','psittacidae',4);
+insert into Animal values ('Zará',133555,'masculino','arara-azul-pequena','psittaciformes','aves','psittacidae',4);
+insert into Animal values ('Rará',223555,'feminino','arara-azul-pequena','psittaciformes','aves','psittacidae',3);
+insert into Animal values ('Rara',323555,'masculino','arara-azul-pequena','psittaciformes','aves','psittacidae',12);
+insert into Animal values ('Zula',423555,'feminino','arara-azul-pequena','psittaciformes','aves','psittacidae',12);
+insert into Animal values ('Zura',523555,'feminino','arara-azul-pequena','psittaciformes','aves','psittacidae',12);
+
+
+insert into Capturado values (123456,'Agra,Índia','1/1/2015','1 ano de idade');
+insert into Capturado values (222456,'Deli,Índia','1/1/2015','1 ano de idade');
+insert into Capturado values (432456,'Calcutá,Índia','1/1/2005','4 meses de idade');
+insert into Capturado values (123444,'Madagascar,África','6/6/2004','1 ano de idade');
+insert into Capturado values (123444,'Madagascar,África','6/6/2004','6 meses de idade');
+insert into Capturado values (123666,'Pirenéus,Europa','1/1/2017','6 meses de idade');
+insert into Capturado values (223666,'Ourense,Europa','1/1/2017','6 meses de idade');
+insert into Capturado values (423666,'Gerês,Europa','1/1/2018','4 meses de idade');
+insert into Capturado values (123555,'Paraná,América do Sul','1/1/2017','6 meses de idade');
+insert into Capturado values (133555,'Paraná,América do Sul','1/1/2017','4 meses de idade');
+insert into Capturado values (223555,'Uruguai,América do Sul','1/1/2018','2 meses de idade');
+
+
+insert into Cativeiro values (322456,'12/12/2005');
+insert into Cativeiro values (422456,'20/1/2006');
+insert into Cativeiro values (522456,'2/3/2007');
+insert into Cativeiro values (622456,'2/2/2008');
+insert into Cativeiro values (323444,'1/9/2006');
+insert into Cativeiro values (323666,'3/4/2008');
+insert into Cativeiro values (524666,'4/3/2008');
+insert into Cativeiro values (323555,'7/5/2009');
+insert into Cativeiro values (423555,'7/5/2009');
+insert into Cativeiro values (523555,'7/5/2009');
+
+
+insert into Progenitor values (322456,'Taji',123456);
+insert into Progenitor values (322456,'Mali',222456);
+insert into Progenitor values (422456,'Taji',123456);
+insert into Progenitor values (422456,'Mali',222456);
+insert into Progenitor values (522456,'Cáta',432456);
+insert into Progenitor values (522456,'Táta',422456);
+insert into Progenitor values (622456,'Kata',522456);
+insert into Progenitor values (622456,'Taji',123456);
+insert into Progenitor values (323444,'Kalu',223666);
+insert into Progenitor values (323444,'Kaki',123666);
+insert into Progenitor values (323666,'Luka',423666);
+insert into Progenitor values (323666,'Kaki',123666);
+insert into Progenitor values (323555,'Rará',223555);
+insert into Progenitor values (323555,'Ará',123555);
+insert into Progenitor values (423555,'Rará'223555);
+insert into Progenitor values (423555,'Ará'123555);
+insert into Progenitor values (523555,'Rará',223555);
+insert into Progenitor values (523555,'Ará',123555);
+
+
+insert into Espaço values (41.40338/2.17403,'A3',1200,'terrestre','quente e húmida');
+insert into Espaço values (31.40338/5.17403,'A4',1100,'terrestre','quente e húmida');
+insert into Espaço values (39.40338/5.97403,'A5',1100,'terrestre','quente e húmida');
+insert into Espaço values (59.40338/5.97403,'A1',2000,'misto','quente e seca');
+insert into Espaço values (59.40338/50.97403,'A2',1500,'terrestre','fria e seca');
+insert into Espaço values (69.40338/70.97403,'A5',500,'terrestre','quente e húmida');
+
+
+insert into Vive values (123456,41.40338/2.17403);
+insert into Vive values (222456,41.40338/2.17403);
+insert into Vive values (322456,41.40338/2.17403);
+insert into Vive values (422456,31.40338/5.17403);
+insert into Vive values (622456,31.40338/5.17403);
+insert into Vive values (432456,39.40338/5.97403);
+insert into Vive values (522456,39.40338/5.97403);
+insert into Vive values (123444,59.40338/5.97403);
+insert into Vive values (223444,59.40338/5.97403);
+insert into Vive values (323444,59.40338/5.97403);
+insert into Vive values (123666,59.40338/50.97403);
+insert into Vive values (223666,59.40338/50.97403);
+insert into Vive values (323666,59.40338/50.97403);
+insert into Vive values (423666,59.40338/50.97403);
+insert into Vive values (524666,59.40338/50.97403);
+insert into Vive values (123555,69.40338/70.97403);
+insert into Vive values (133555,69.40338/70.97403);
+insert into Vive values (223555,69.40338/70.97403);
+insert into Vive values (323555,69.40338/70.97403);
+insert into Vive values (423555,69.40338/70.97403);
+insert into Vive values (523555,69.40338/70.97403);
+
+
+insert into Funcionário values (123123123,'Joaquim Silva','1/2/2003');
+insert into Funcionário values (123123124,'Manuel Santos','1/4/2003');
+insert into Funcionário values (123123125,'Maria Gomes','1/1/2003');
+insert into Funcionário values (123123126,'Mariana Silva','1/2/2004');
+insert into Funcionário values (123123127,'Jorge Gomes','1/3/2004');
+insert into Funcionário values (123123128,'Francisco Jorge','1/3/2004');
+insert into Funcionário values (123123129,'Manuel Ferreira','1/2/2004');
+insert into Funcionário values (123123130,'Manuela Torres','1/4/2004');
+insert into Funcionário values (123123131,'Pedro Vale','1/5/2004');
+insert into Funcionário values (123123132,'Isabel Soares','1/6/2004');
+
+
+insert into Funcionário_telefones values (123123123,919999999,266787809);
+insert into Funcionário_telefones values (123123124,919999998,266787808);
+insert into Funcionário_telefones values (123123125,919999997,266787807);
+insert into Funcionário_telefones values (123123126,919999996,266787806);
+insert into Funcionário_telefones values (123123127,919999995,266787807);
+insert into Funcionário_telefones values (123123128,919999994,266787806);
+insert into Funcionário_telefones values (123123129,919999996,266787806);
+insert into Funcionário_telefones values (123123130,919999996,266787806);
+insert into Funcionário_telefones values (123123131,919999986,266787816);
+insert into Funcionário_telefones values (123123132,919999976,266787826);
+
+
+
+insert into Responsável values (123123123,123123125);
+insert into Responsável values (123123124,123123125);
+insert into Responsável values (123123125,123123130);
+insert into Responsável values (123123126,123123130);
+insert into Responsável values (123123127,123123130);
+insert into Responsável values (123123128,123123130);
+insert into Responsável values (123123129,123123130);
+insert into Responsável values (123123130,123123129);
+insert into Responsável values (123123131,123123129);
+insert into Responsável values (123123132,123123131);
+
+
+insert into Tratado values (123456,123123123);
+insert into Tratado values (222456,123123123);
+insert into Tratado values (322456,123123123);
+insert into Tratado values (422456,123123123);
+insert into Tratado values (432456,123123123);
+insert into Tratado values (522456,123123123);
+insert into Tratado values (622456,123123123);
+insert into Tratado values (123444,123123124);
+insert into Tratado values (223444,123123124);
+insert into Tratado values (323444,123123124);
+insert into Tratado values (123666,123123124);
+insert into Tratado values (223666,123123124);
+insert into Tratado values (323666,123123124);
+insert into Tratado values (423666,123123124);
+insert into Tratado values (524666,123123124);
+insert into Tratado values (123555,123123125);
+insert into Tratado values (133555,123123125);
+insert into Tratado values (223555,123123125);
+insert into Tratado values (323555,123123125);
+insert into Tratado values (423555,123123125);
+insert into Tratado values (523555,123123125);
+
+
+insert into Trabalha values (41.40338/2.17403,123123126);
+insert into Trabalha values (31.40338/5.17403,123123126);
+insert into Trabalha values (39.40338/5.97403,123123126);
+insert into Trabalha values (59.40338/5.97403,123123127);
+insert into Trabalha values (59.40338/50.97403,123123128);
+insert into Trabalha values (39.40338/5.97403,123123128);
+
+
+insert into Tratador values (123123123);
+insert into Tratador values (123123124);
+insert into Tratador values (123123125);
+
+
+insert into Tratador_Aux values (123123126);
+insert into Tratador_Aux values (123123127);
+insert into Tratador_Aux values (123123128);
+
+
+insert into Admnistrativo values (123123129);
+insert into Admnistrativo values (123123130);
+
+
+insert into Veterinário values (123123131);
+insert into Veterinário values (123123132);
+
+
+insert into Consulta values (123123131,'12/8/2005','9:00','Consultório 1');
+insert into Consulta values (123123131,'12/9/2005','9:10','Consultório 1');
+insert into Consulta values (123123131,'12/12/2005','9:05','Consultório 1');
+insert into Consulta values (123123131,'12/7/2006','10:08','Consultório 1');
+insert into Consulta values (123123131,'12/7/2006','9:18','Consultório 1');
+insert into Consulta values (123123131,'12/5/2009','9:08','Consultório 1');
+insert into Consulta values (123123131,'12/5/2009','9:23','Consultório 1');
+insert into Consulta values (123123131,'12/5/2009','9:08','Consultório 1');
+insert into Consulta values (123123131,'12/5/2009','9:42','Consultório 1');
+insert into Consulta values (123123131,'12/5/2009','19:08','Consultório 1');
+insert into Consulta values (123123131,'12/5/2009','18:08','Consultório 1');
+insert into Consulta values (123123131,'12/8/2007','19:26','Consultório 1');
+insert into Consulta values (123123131,'12/8/2007','19:38','Consultório 1');
+insert into Consulta values (123123132,'12/7/2006','19:25','Consultório 2');
+insert into Consulta values (123123132,'12/7/2006','14:59','Consultório 2');
+insert into Consulta values (123123132,'12/9/2006','19:15','Consultório 2');
+insert into Consulta values (123123132,'12/7/2007','15:25','Consultório 2');
+insert into Consulta values (123123132,'12/7/2007','16:12','Consultório 2');
+insert into Consulta values (123123132,'12/7/2007','11:27','Consultório 2');
+insert into Consulta values (123123132,'12/7/2007','12:45','Consultório 2');
+insert into Consulta values (123123132,'12/9/2007','13:25','Consultório 2');
+insert into Consulta values (123123132,'12/6/2009','8:25','Consultório 2');
+insert into Consulta values (123123132,'12/6/2009','19:21','Consultório 2');
+
+
+insert into Vai values (123123131,'12/8/2005','9:00',423555);
+insert into Vai values (123123131,'12/9/2005','9:10',222456);
+insert into Vai values (123123131,'12/12/2005','9:05',524666);
+insert into Vai values (123123131,'12/7/2006','10:08',123456);
+insert into Vai values (123123131,'12/7/2006','9:18',422456);
+insert into Vai values (123123131,'12/5/2009','9:08',223666);
+insert into Vai values (123123131,'12/5/2009','9:23',423555);
+insert into Vai values (123123131,'12/5/2009','9:08',223666);
+insert into Vai values (123123131,'12/5/2009','9:42',123456);
+insert into Vai values (123123131,'12/5/2009','19:08',622456);
+insert into Vai values (123123131,'12/5/2009','18:08',323555);
+insert into Vai values (123123131,'12/8/2007','19:26',523555);
+insert into Vai values (123123131,'12/8/2007','19:38',223666);
+insert into Vai values (123123132,'12/7/2006','19:25',622456);
+insert into Vai values (123123132,'12/7/2006','14:59',223666);
+insert into Vai values (123123132,'12/9/2006','19:15',423555);
+insert into Vai values (123123132,'12/7/2007','15:25',222456);
+insert into Vai values (123123132,'12/7/2007','16:12',523555);
+insert into Vai values (123123132,'12/7/2007','11:27',123456);
+insert into Vai values (123123132,'12/7/2007','12:45',423555);
+insert into Vai values (123123132,'12/9/2007','13:25',322456);
+insert into Vai values (123123132,'12/6/2009','8:25',523555);
+insert into Vai values (123123132,'12/6/2009','19:21',323555);
+
+
+insert into Diagnóstico values (123123131,'12/8/2005','9:00','grávida');
+insert into Diagnóstico values (123123131,'12/7/2006','10:08','infecção');	
+insert into Diagnóstico values (123123131,'12/5/2009','09:08','infecção');	
+insert into Diagnóstico values (123123131,'12/5/2009','09:08','infecção');
+insert into Diagnóstico values (123123131,'12/5/2009','19:08','infecção');
+insert into Diagnóstico values (123123131,'12/8/2007','19:26','infecção');
+insert into Diagnóstico values (123123132,'12/7/2006','19:25','grávida');
+insert into Diagnóstico values (123123132,'12/7/2007','15:25','infecção');
+insert into Diagnóstico values (123123132,'12/7/2007','11:27','grávida');
+insert into Diagnóstico values (123123132,'12/6/2009','8:25','infecção');
+
+
+insert into Tratamento values (123123131,'12/9/2005','9:10','cálcio injectado');
+insert into Tratamento values (123123131,'12/12/2005','9:05','parto');
+insert into Tratamento values (123123131,'12/7/2006','9:18','antibiótico injectado');
+insert into Tratamento values (123123131,'12/5/2009','9:23','antibiótico injectado');
+insert into Tratamento values (123123131,'12/5/2009','9:42','antibiótico injectado');
+insert into Tratamento values (123123131,'12/5/2009','18:08','antibiótico injectado');
+insert into Tratamento values (123123131,'12/8/2007','19:38','antibiótico injectado');
+insert into Tratamento values (123123132,'12/7/2006','14:59','cálcio injectado');
+insert into Tratamento values (123123132,'12/9/2006','19:15','parto');
+insert into Tratamento values (123123132,'12/7/2007','16:12','antibiótico injectado');
+insert into Tratamento values (123123132,'12/7/2007','12:45','cálcio injectado');
+insert into Tratamento values (123123132,'12/9/2007','13:25','parto');
+insert into Tratamento values (123123132,'12/6/2009','19:21','antibiótico injectado');
+
+
